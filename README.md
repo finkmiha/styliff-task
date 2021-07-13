@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# Styliff-task
+
+This task is a assignment for the frontend engineer postion at Styliff.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
