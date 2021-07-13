@@ -72,7 +72,6 @@ export default function RepoTable(props: Props) {
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
   const [rows, setRows] = React.useState<Data[]>([]);
   const [isLoading, setIsLoading] = React.useState(false);
-  const [isError, setIsError] = React.useState(false);
 
   const handleChangePage = (event: unknown, newPage: number) => {
     setPage(newPage);
@@ -97,7 +96,6 @@ export default function RepoTable(props: Props) {
   };
 
   const fetchAPI = React.useCallback(async () => {
-    setIsError(false);
     setIsLoading(true);
     try {
       let response = await fetch(`https://api.github.com/search/repositories?q=${search}`);
@@ -109,7 +107,7 @@ export default function RepoTable(props: Props) {
       }
       setRows(data)
     } catch (error) {
-      setIsError(true);
+      console.log(error);
     }
     setIsLoading(false);
   }, [search])
