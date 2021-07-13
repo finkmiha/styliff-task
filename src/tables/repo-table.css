@@ -1,0 +1,17 @@
+.search-input {
+    margin: 20px;
+    padding: 5px 23px;
+    width: 250px;
+    height: 40px;
+    border: 1px solid #DF044B;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.search-input:focus {
+    outline: 0;
+}
+
+.table-wrapper {
+    margin: 20px;
+}
